@@ -41,6 +41,10 @@ main{
 main > section{
     margin-top: 130px;
 }
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
 
 /* header styles */
 
@@ -94,25 +98,76 @@ main > section{
     margin-left: 130px;
     max-width: 530px;
 }
-.feature-title{
-    font-size: 2.8rem;
-    font-weight: 700;
-}
+
 #quick-list{
     font-weight: 500;
 }
+/* some fact related style */
+.fact-card{
+    border: 1px solid #ff900e;
+    width: 240px;
+    height: 240px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
 
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.fact-description{
+    max-width: 540px;
+    
+}
 
+/* sponsor related style */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
 
-
+.sponsore-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsore-companies img{
+    filter: grayscale(100%);
+}
 /* reponsive media query */
 @media screen and (max-width:576px) {
-    .navbar,.nav-links, .teams{
+    .navbar,.nav-links, 
+    .teams{
         flex-direction: column;
     }
     
-    .team-img-container{
-        grid-template-columns: repeat(1, 1fr);
+    .team-img-container,
+    .facts-container,
+    .sponsore-companies
+    {
+        grid-template-columns: 1fr;
+    }
+    .facts-container
+    {
+        justify-items: center;
+        gap: 24px;
+    }
+    .sponsore-companies{
+        justify-items: center;
+        gap:30px;
     }
     .out-features{
         margin-left: 20px;
@@ -126,5 +181,15 @@ main > section{
     }
     .our-features{
         margin-left: 50px;
+    }
+    .sponsore-companies, 
+    .facts-container
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    .facts{
+        justify-items: center;
     }
 }
